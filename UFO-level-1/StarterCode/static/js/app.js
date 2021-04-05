@@ -21,11 +21,12 @@ console.log(data);
 //     });
 //   });
 
-var DateData = d3.select("#datetime")
+var DateData = d3.select("#datetime");
 
 
 function populateData(userEntry) {
     userEntry.forEach((UFOSighting) =>{
+        console.log(UFOSighting);
         var row = tbody.append("tr");
         Object.entries(UFOSighting.forEach(([key, value]) => {
             var cell = row.append("td");
@@ -36,10 +37,11 @@ function populateData(userEntry) {
 
 function runEnter ()
 
-var filterDataDate = tableData
+var filteredDataDate = tableData;
+var InputValueDate = DateData.property("value");
 
 if (inputValueDate) {
-    filteredDataDate = filteredDataDate.filter(tableData => tableData.datetime === inputValueDate
+    filteredDataDate = filteredDataDate.filter(tableData => tableData.datetime === inputValueDate)
 }
 
 tbody.html("");
@@ -60,12 +62,3 @@ if (filteredDataDate !== 0) {
 //   });
 
 
-// {
-//     datetime: "1/1/2010",
-//     city: "bonita",
-//     state: "ca",
-//     country: "us",
-//     shape: "light",
-//     durationMinutes: "13 minutes",
-//     comments: "Three bright red lights witnessed floating stationary over San Diego New Years Day 2010"
-//   },
