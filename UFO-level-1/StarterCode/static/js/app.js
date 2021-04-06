@@ -2,10 +2,12 @@
 var tableData = data;
 
 // Get a reference to the table body
-var tbody = d3.select("tbody");
+// var tbody = d3.select("tbody");
+
+var DateData = d3.select("#datetime");
 
 // Console.log the weather data from data.js
-console.log(data);
+// console.log(data);
 
 // Use d3 to update each cell's text with
 // UFO report values (City, State, Country, Shape, Duration, Comments)
@@ -21,8 +23,6 @@ console.log(data);
 //     });
 //   });
 
-var DateData = d3.select("#datetime");
-
 
 function populateData(userEntry) {
     userEntry.forEach((UFOSighting) =>{
@@ -35,20 +35,21 @@ function populateData(userEntry) {
     })
 }
 
-function runEnter ()
+function runEnter () {
 
-var filteredDataDate = tableData;
-var InputValueDate = DateData.property("value");
+    var filteredDataDate = tableData;
+    var inputValueDate = DateData.property("value");
 
-if (inputValueDate) {
-    filteredDataDate = filteredDataDate.filter(tableData => tableData.datetime === inputValueDate)
-}
+    if (inputValueDate) {
+        filteredDataDate = filteredDataDate.filter(tableData => tableData.datetime === inputValueDate)
+    };
 
-tbody.html("");
+    tbody.html("");
 
-if (filteredDataDate !== 0) {
-    populateData(filteredDataDate);
-}
+    if (filteredDataDate !== 0) {
+        populateData(filteredDataDate);
+    };
+};
 
 
   // New UFO sighting to add to the table
