@@ -1,9 +1,3 @@
-// Office hours was taken up by other students' questions.
-// I was unable to get enough time with the TA during office hours,
-// both before and after class, on Monday evening 4/5.
-// We agreed to meet (again) at the very beginning of office hours, 5:45pm,
-// on Wednesday, 4/7 so that I can then turn in a complete assignment.
-
 // from data.js
 var tableData = data;
 
